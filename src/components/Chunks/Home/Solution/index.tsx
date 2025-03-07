@@ -6,7 +6,7 @@ import SolutionCard from '@/components/Card/Solution'
 import { Container } from '@/components/Layouts'
 
 const Background = styled.div`
-  ${tw`bg-[#F9FAFB]`}
+  ${tw`bg-gray-50`}
 `
 const Content = styled.div`
   ${tw`flex flex-col items-center justify-between w-full text-center `}

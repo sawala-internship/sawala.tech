@@ -14,4 +14,3 @@ export const Partnership: React.FC = () => {
     </Element>
   )
 }
-

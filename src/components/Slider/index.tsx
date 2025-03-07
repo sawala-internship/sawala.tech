@@ -32,14 +32,12 @@ const SliderPartnership = () => {
     customPaging: () => (
       <div className="mt-10 h-3 w-3 bg-[#D9D9D9] rounded-full transition-all duration-300 hover:bg-primary/70"></div>
     ),
-  
     // appendDots: (dots) => (
     //   <div className="flex justify-center">
     //     <ul>{dots}</ul>
     //   </div>
     // ),
   };
-
   return (
     <div className="w-full md:max-w-3xl lg:max-w-[816px] mx-auto p-2 ">
       <Slider {...settings}>
