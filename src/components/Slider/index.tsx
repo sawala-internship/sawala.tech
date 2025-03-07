@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const SliderPartnership = () => {
   const settings = {
-    dots: false,
+    dots: false, //pagination
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -18,16 +18,6 @@ const SliderPartnership = () => {
     arrows: false,
     adaptiveHeight: true,
 
-   
-    customPaging: (i) => (
-      <div className="mt-0 h-3 w-3 flex justify-center bg-[#D9D9D9] rounded-full transition-all duration-300 hover:bg-primary/70"></div>
-    ),
-  
-    appendDots: (dots) => (
-      <div className="flex justify-center">
-        <ul className="">{dots}</ul>
-      </div>
-    ),
 
     responsive: [
       {
@@ -39,15 +29,15 @@ const SliderPartnership = () => {
         settings: { slidesToShow: 1, slidesToScroll: 1 },
       },
     ],
-    customPaging: (i) => (
+    customPaging: () => (
       <div className="mt-10 h-3 w-3 bg-[#D9D9D9] rounded-full transition-all duration-300 hover:bg-primary/70"></div>
     ),
   
-    appendDots: (dots) => (
-      <div className="flex justify-center">
-        <ul>{dots}</ul>
-      </div>
-    ),
+    // appendDots: (dots) => (
+    //   <div className="flex justify-center">
+    //     <ul>{dots}</ul>
+    //   </div>
+    // ),
   };
 
   return (
