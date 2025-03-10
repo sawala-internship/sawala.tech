@@ -52,7 +52,7 @@ export const Navbar: FC<LinkProps> = ({ withScrolled = true }) => {
             />
           </div>
           <div tw="w-11/12">
-            <ul tw="relative w-auto h-auto flex items-center p-2 ">
+            <ul tw="relative w-auto h-auto flex items-center p-2">
               <li tw="relative">
                 <div tw="flex justify-center items-center">
                   <a

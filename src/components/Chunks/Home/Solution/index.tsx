@@ -5,8 +5,11 @@ import tw, { styled } from 'twin.macro'
 import SolutionCard from '@/components/Card/Solution'
 import { Container } from '@/components/Layouts'
 
+const Background = styled.div`
+  ${tw`bg-gray-50`}
+`
 const Content = styled.div`
-  ${tw`flex flex-col items-center justify-between w-full text-center`}
+  ${tw`flex flex-col items-center justify-between w-full text-center `}
 `
 const ContentHead = styled.h1`
   ${tw`mt-20 mb-16 text-3xl font-bold lg:text-4xl`}
@@ -21,6 +24,7 @@ export const Solution: React.FC = () => {
   return (
     <>
       <Element name="solution" className="element">
+       <Background>
         <Container tag={'div'} tw="px-5 md:px-14">
           <Content>
             <ContentHead>
@@ -43,6 +47,7 @@ export const Solution: React.FC = () => {
             </ContentSolutionWrapper>
           </Content>
         </Container>
+        </Background>
       </Element>
     </>
   )

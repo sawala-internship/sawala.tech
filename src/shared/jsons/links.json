@@ -15,6 +15,11 @@
     "offset": -55
   },
   {
+    "to": "partnership",
+    "title": "Partnership",
+    "offset": -55
+  },
+  {
     "to": "solution",
     "title": "Solution",
     "offset": -55
