@@ -44,7 +44,7 @@ const SliderPartnership = () => {
         {contentData.map((item, index) => (
           <div key={item.id || index} className="p-2">
             <div className="flex flex-col md:flex-row items-center md:items-start p-7 space-y-10 md:space-y-0 md:space-x-10 bg-primary/5 rounded-xl">
-            <Link href="https://example.com">
+            <Link href={item.link}>
               <a href={item.link}  target="_blank" rel="noopener noreferrer">
                 <div className="w-44 h-44 cursor-pointer rounded-md bg-white flex items-center justify-center p-4 border-slate-200 border-[1.2px]">
                   <Image src={item.image} unoptimized width={165} height={23} alt="Logo" />
