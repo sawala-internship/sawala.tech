@@ -14,7 +14,7 @@ export const AboutDesa: React.FC = () => {
           </p>
 
           <ul className="pl-5 list-decimal">
-            <li>Surat Keputusan Gubernur Jawa Barat Nomor : 146/SK.1968-Pemdes/1982, Tanggal 30 Nopember 1982.</li>
+            <li>Surat Keputusan Gubernur Jawa Barat Nomor : 146/SK.1968-Pemdes/1982, Tanggal 30 November 1982.</li>
             <li>Surat Keputusan Bupati Bandung Nomor : 146/SK.PM.024-BK-HUK/1983, Tanggal 27 Juli 1983</li>
           </ul>
 
