@@ -40,9 +40,10 @@ const Team: FC<TeamProps> = ({ image, name, about, link }) => {
         unoptimized={true}
         src={image}
         layout="fixed"
+        className="rounded-full bg-primary"
         width={isDesktop ? 140 : 100}
         height={isDesktop ? 140 : 100}
-        objectFit="contain"
+        objectFit="cover"
       />
       <Title>
         {name}

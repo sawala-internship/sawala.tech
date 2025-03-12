@@ -1,12 +1,9 @@
-import { Fragment } from 'react'
-import { Element } from 'react-scroll'
-import dataFounder from '@jsons/founder.json'
-import dataTeam from '@jsons/team.json'
 import Button from '@/components/Buttons'
-import FounderCard from '@/components/Card/Founder'
 import TeamCard from '@/components/Card/Team'
 import { Container } from '@/components/Layouts'
-import { useState, useEffect } from 'react'
+import { useTeam } from '@hooks/useTeam'
+import { Fragment, useEffect, useState } from 'react'
+import { Element } from 'react-scroll'
 
 export const Team: React.FC = () => {
   const [isClass, setClass] = useState<string>()
@@ -30,6 +27,9 @@ export const Team: React.FC = () => {
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
+
+  const { dataTeam, isLoadingTeam } = useTeam(`our-teams?populate=*`)
+
   return (
     <>
       <Element name="team" className="element">
@@ -40,37 +40,34 @@ export const Team: React.FC = () => {
             </h1>
 
             <div className={`grid gap-4 mb-24 ${isClass}`}>
-              {dataTeam.map((data: any, i: number) => (
-                <Fragment key={i}>
-                  <TeamCard key={i} image={data?.image} name={data?.name} about={data?.about} link={data?.link} />
-                </Fragment>
-              ))}
-
-              <div tw="place-items-center md:order-last lg:order-none p-4 hidden md:flex w-full h-[220px] cursor-default transition ease-in-out delay-100 focus:outline-none hover:scale-110 bg-blue-400 duration-200 rounded-xl">
-                <div className="p-4 text-xl font-medium text-left text-white">
-                  <p tw="w-11/12">Accelerate good things with technology</p>
-                  <Button
-                    text="Meet entire team"
-                    variant="secondary"
-                    tw="rounded-md px-5 mt-12 font-medium text-base py-2 text-opacity-70"
-                    external={true}
-                    url="https://wa.link/4l62ek"
-                  />
-                </div>
-              </div>
-
-              {dataFounder.map((data: any, i: number) => (
-                <Fragment key={i}>
-                  <FounderCard
-                    key={i}
-                    image={data?.image}
-                    name={data?.name}
-                    about={data?.about}
-                    desc={data?.desc}
-                    link={data?.link}
-                  />
-                </Fragment>
-              ))}
+              {!isLoadingTeam && (
+                <>
+                  {dataTeam?.data.map((data: any, i: number) => (
+                    <Fragment key={i}>
+                      <TeamCard
+                        image={data?.attributes?.photo?.data?.attributes?.url}
+                        name={data?.attributes?.name}
+                        about={data?.attributes?.position}
+                        link={data?.attributes?.lingkedInUrl}
+                      />
+                      {i == 2 && (
+                        <div tw="place-items-center md:order-last lg:order-none p-4 hidden md:flex w-full h-[220px] cursor-default transition ease-in-out delay-100 focus:outline-none hover:scale-110 bg-blue-400 duration-200 rounded-xl">
+                          <div className="p-4 text-xl font-medium text-left text-white">
+                            <p tw="w-11/12">Accelerate good things with technology</p>
+                            <Button
+                              text="Meet entire team"
+                              variant="secondary"
+                              tw="rounded-md px-5 mt-12 font-medium text-base py-2 text-opacity-70"
+                              external={true}
+                              url="https://wa.link/4l62ek"
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </Fragment>
+                  ))}
+                </>
+              )}
 
               <div tw="place-items-center p-4 flex md:hidden w-full h-[220px] cursor-default transition ease-in-out delay-100 focus:outline-none hover:scale-110 bg-blue-400 duration-200 rounded-xl">
                 <div className="p-4 text-xl font-medium text-left text-white">

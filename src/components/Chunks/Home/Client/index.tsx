@@ -1,9 +1,9 @@
-import ClienCard from '@/components/Card/Client'
 import { Container } from '@/components/Layouts'
 import Button from '@components/Buttons'
-import dataClient from '@jsons/client.json'
-import tw, { styled } from 'twin.macro'
+import { useClient } from '@hooks/useClient'
 import { Element } from 'react-scroll'
+import tw, { styled } from 'twin.macro'
+import Image from 'next/image'
 
 const Background = styled.div`
   ${tw`bg-gray-50`}
@@ -25,6 +25,7 @@ const ContentGaleryItems = styled.div`
 `
 
 export const Client: React.FC = () => {
+  const { dataClient, isLoadingClient } = useClient(`featured-client?populate=Component.image`)
   return (
     <>
       <Element name="client" className="element">
@@ -39,11 +40,22 @@ export const Client: React.FC = () => {
                 software/sistem informasi mereka.
               </Contentsub>
               <ContentGalery>
-                {dataClient.map((dataClient: { thumb: string }, i: number) => (
-                  <ContentGaleryItems key={i}>
-                    <ClienCard image={dataClient.thumb}></ClienCard>
-                  </ContentGaleryItems>
-                ))}
+                {!isLoadingClient && (
+                  <>
+                    {dataClient?.data?.attributes?.Component?.map((data: any, i: number) => (
+                      <ContentGaleryItems key={i}>
+                        <Image
+                          unoptimized={true}
+                          src={data?.image?.data?.attributes?.url}
+                          layout="fixed"
+                          width={140}
+                          height={65}
+                          objectFit="contain"
+                        />
+                      </ContentGaleryItems>
+                    ))}
+                  </>
+                )}
               </ContentGalery>
               <Button text="More Client" tw="hidden rounded-full px-12 mt-10"></Button>
             </Content>

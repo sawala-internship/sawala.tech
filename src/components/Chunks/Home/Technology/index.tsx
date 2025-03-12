@@ -23,7 +23,7 @@ const ContentBottomSub = styled.div`
   ${tw`flex flex-col items-center mb-6 text-gray-500 sm:hidden`}
 `
 const ContentBottomtBot = styled.div`
-  ${tw`grid block grid-cols-2 gap-2 justify-items-center sm:hidden`}
+  ${tw`grid grid-cols-2 gap-2 justify-items-center sm:hidden`}
 `
 const ContentLeftBot = styled.div`
   ${tw`py-10 lg:py-0 lg:mt-[2.875rem] justify-items-center hidden sm:grid sm:grid-cols-2 md:gap-5 sm:gap-2 lg:grid-rows-3`}
@@ -165,24 +165,17 @@ export const Technology: React.FC = () => {
             </ContentRight>
             <ContentBottomSub>
               <ContentBottomtBot>
-                <div>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-1.png'} height={70} width={170} layout="fixed" />
-                </div>
-                <div>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-4.png'} height={70} width={170} layout="fixed" />
-                </div>
-                <div>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-2.png'} height={70} width={170} layout="fixed" />
-                </div>
-                <div>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-5.png'} height={70} width={170} layout="fixed" />
-                </div>
-                <div>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-3.png'} height={70} width={170} layout="fixed" />
-                </div>
-                <div>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-6.png'} height={70} width={170} layout="fixed" />
-                </div>
+                <Image unoptimized={true} src={'/assets/images/tech-left-1.png'} height={70} width={170} layout="fixed" />
+
+                <Image unoptimized={true} src={'/assets/images/tech-left-4.png'} height={70} width={170} layout="fixed" />
+
+                <Image unoptimized={true} src={'/assets/images/tech-left-2.png'} height={70} width={170} layout="fixed" />
+
+                <Image unoptimized={true} src={'/assets/images/tech-left-5.png'} height={70} width={170} layout="fixed" />
+
+                <Image unoptimized={true} src={'/assets/images/tech-left-3.png'} height={70} width={170} layout="fixed" />
+
+                <Image unoptimized={true} src={'/assets/images/tech-left-6.png'} height={70} width={170} layout="fixed" />
               </ContentBottomtBot>
               <Button text="See More" variant="primary" tw="hidden mt-6 rounded-full px-12" />
             </ContentBottomSub>

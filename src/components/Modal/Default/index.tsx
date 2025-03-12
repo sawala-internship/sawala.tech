@@ -1,4 +1,4 @@
-import Links from '@/components/Card/Link'
+import Links from '@/components/Link'
 import { Dialog, Transition } from '@headlessui/react'
 import dataLinks from '@jsons/links.json'
 import { Fragment, useEffect, useState } from 'react'
@@ -37,6 +37,7 @@ export const DefaultModal: React.FunctionComponent<DefaultModal & React.HTMLAttr
       getOpen()
     }
   }, [open])
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>

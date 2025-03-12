@@ -1,5 +1,6 @@
 import { Container } from '@/components/Layouts'
 import tw, { styled } from 'twin.macro'
+import { useAbout } from '@hooks/useAbout'
 import { Element } from 'react-scroll'
 
 const Content = styled.div`
@@ -15,6 +16,8 @@ const Contentsub = styled.p`
 `
 
 export const About: React.FC = () => {
+  const { dataAbout, isLoadingAbout } = useAbout(`about?populate=*`)
+
   return (
     <>
       <Element name="about" className="element">
@@ -23,11 +26,7 @@ export const About: React.FC = () => {
             <ContentHead>
               About<span tw="text-secondary">_</span>
             </ContentHead>
-            <Contentsub>
-              Dirintis sejak tahun 2015 dan berdiri menjadi bisnis berbadan hukum pada tahun 2018. Selain mengerjakan
-              software/sistem informasi sesuai kebutuhan klien, SAWALA juga merupakan mitra penjualan resmi Google
-              Workspace/Suite, DigitalOcean, LivePerson dan Amazon Web Services (AWS) di Indonesia.
-            </Contentsub>
+            <Contentsub>{!isLoadingAbout && dataAbout?.data?.attributes?.AboutText}</Contentsub>
           </Content>
         </Container>
       </Element>

@@ -1,12 +1,15 @@
+import { useSolution } from '@hooks/useSolution'
+import { Fragment } from 'react'
 import { Element } from 'react-scroll'
 import tw, { styled } from 'twin.macro'
-import dataSolution from '@jsons/solution.json'
 import SolutionCard from '@/components/Card/Solution'
 import { Container } from '@/components/Layouts'
-import { Fragment } from 'react'
 
+const Background = styled.div`
+  ${tw`bg-gray-50`}
+`
 const Content = styled.div`
-  ${tw`flex flex-col items-center justify-between w-full text-center`}
+  ${tw`flex flex-col items-center justify-between w-full text-center `}
 `
 const ContentHead = styled.h1`
   ${tw`mt-20 mb-16 text-3xl font-bold lg:text-4xl`}
@@ -16,23 +19,35 @@ const ContentSolutionWrapper = styled.div`
 `
 
 export const Solution: React.FC = () => {
+  const { dataSolution, isLoadingSolution } = useSolution(`solutions?populate=*`)
+
   return (
     <>
       <Element name="solution" className="element">
+       <Background>
         <Container tag={'div'} tw="px-5 md:px-14">
           <Content>
             <ContentHead>
               Solutions<span tw="text-secondary">_</span>
             </ContentHead>
             <ContentSolutionWrapper>
-              {dataSolution.map((data: any, i: number) => (
-                <Fragment key={i}>
-                  <SolutionCard key={i} image={data?.icon} title={data?.title} subtitle={data?.subtitle} />
-                </Fragment>
-              ))}
+              {!isLoadingSolution && (
+                <>
+                  {dataSolution?.data.map((data: any, i: number) => (
+                    <Fragment key={i}>
+                      <SolutionCard
+                        image={data?.attributes?.icon?.data?.attributes?.url}
+                        title={data?.attributes?.title}
+                        subtitle={data?.attributes.description}
+                      />
+                    </Fragment>
+                  ))}
+                </>
+              )}
             </ContentSolutionWrapper>
           </Content>
         </Container>
+        </Background>
       </Element>
     </>
   )

@@ -1,9 +1,8 @@
+import { useProduct } from '@hooks/useProduct'
+import { Fragment, useEffect, useState } from 'react'
 import { Element } from 'react-scroll'
-import { Fragment } from 'react'
-import { useState, useEffect } from 'react'
 import tw, { styled } from 'twin.macro'
 import { Container } from '@/components/Layouts'
-import dataProduct from '@jsons/product.json'
 import ProductCard from '@/components/Card/Product'
 
 const Background = styled.div`
@@ -28,8 +27,12 @@ export const Product: React.FC = () => {
     }
     handleResize()
     window.addEventListener('resize', handleResize)
+
     return () => window.removeEventListener('resize', handleResize)
   }, [])
+
+  const { dataProduct, isLoadingProduct } = useProduct(`products?populate=*`)
+
   return (
     <>
       <Element name="product" className="element">
@@ -38,17 +41,20 @@ export const Product: React.FC = () => {
             <Content>
               <ContentHead>Products_</ContentHead>
               <div className={`grid ${isClass}`}>
-                {dataProduct.map((data: any, i: number) => (
-                  <Fragment key={i}>
-                    <ProductCard
-                      key={i}
-                      image={data?.icon}
-                      title={data?.title}
-                      subtitle={data?.subtitle}
-                      link={data?.link}
-                    />
-                  </Fragment>
-                ))}
+                {!isLoadingProduct && (
+                  <>
+                    {dataProduct?.data.map((data: any, i: number) => (
+                      <Fragment key={i}>
+                        <ProductCard
+                          image={data?.attributes?.images?.data?.attributes?.url}
+                          title={data?.attributes?.title}
+                          subtitle={data?.attributes?.description}
+                          link={data?.attributes?.url}
+                        />
+                      </Fragment>
+                    ))}
+                  </>
+                )}
               </div>
             </Content>
           </Container>

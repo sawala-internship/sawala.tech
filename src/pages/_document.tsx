@@ -18,7 +18,7 @@ export default class _DOCUMENT extends Document<{
       <Html>
         <Head>
           <style data-emotion-css={this.props.ids.join(' ')} dangerouslySetInnerHTML={{ __html: this.props.css }} />
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
               const qchatInit = document.createElement('script');
@@ -30,7 +30,7 @@ export default class _DOCUMENT extends Document<{
               qchatInit.onload = function () {qchatInitialize({ id: '893dca5c-ae42-4005-a334-a9060f8ebe17', code: 'wexb92CgFwzD2caRWpUJEA' })};
           `
             }}
-          />
+          /> */}
         </Head>
         <body>
           <Main />

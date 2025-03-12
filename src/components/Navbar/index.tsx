@@ -8,7 +8,13 @@ const A = styled.a`
   ${tw`flex px-5 my-3 text-base font-normal tracking-wider text-[#011154]`}
 `
 
-export const Navbar: React.FC = () => {
+import { FC } from 'react'
+import { useRouter } from 'next/router'
+interface LinkProps {
+  withScrolled?: boolean
+}
+
+export const Navbar: FC<LinkProps> = ({ withScrolled = true }) => {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [dropdown, setDropdown] = useState(false)
@@ -25,21 +31,28 @@ export const Navbar: React.FC = () => {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
   }, [])
-
+  const router = useRouter()
   return (
     <>
       <header
         className={`fixed top-0 z-30 w-full ${
-          scrolled
-            ? 'bg-white py-3 lg:py-5 shadow-md transition-all duration-700'
-            : 'transition-all duration-500 py-5 lg:py-10'
+          withScrolled
+            ? scrolled
+              ? 'bg-white py-3 lg:py-5 shadow-md transition-all duration-700'
+              : 'transition-all duration-500 py-5 lg:py-10'
+            : 'bg-white py-3 lg:py-5 shadow-md transition-all duration-700'
         }`}>
         <Container tag="nav" tw="flex items-center justify-between">
-          <div tw="relative w-[155px] h-auto flex justify-start p-5">
-            <Image unoptimized={true} src={'/assets/images/logo-sawala-tech(new).svg'} layout={'fill'} />
+          <div tw="relative w-[155px] h-auto flex justify-start p-5 cursor-pointer">
+            <Image
+              unoptimized={true}
+              src={'/assets/images/logo-sawala-tech(new).svg'}
+              layout={'fill'}
+              onClick={() => router?.push('/')}
+            />
           </div>
           <div tw="w-11/12">
-            <ul tw="relative w-auto h-auto flex items-center p-2 ">
+            <ul tw="relative w-auto h-auto flex items-center p-2">
               <li tw="relative">
                 <div tw="flex justify-center items-center">
                   <a
