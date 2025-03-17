@@ -20,6 +20,7 @@ export const About: React.FC = () => {
 
   return (
     <>
+      {/* @ts-ignore */}
       <Element name="about" className="element">
         <Container tag={'div'} tw="px-0 sm:p-5 md:p-10">
           <Content>

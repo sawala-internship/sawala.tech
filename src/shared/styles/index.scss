@@ -1,26 +1,17 @@
-@import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css";
-
 @import 'tailwindcss/base';
-/* Write your own custom base styles here */
-/* Start purging... */
 @import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-/* Stop purging. */
-@import 'typography';
-@import 'loader';
+@import './vendors/slick/slick';
+@import './vendors/slick/slick-theme';
+
 html,
-
 body {
   scroll-behavior: smooth;
   background-color: #fff;
 }
-.slick-dots li.slick-active div {
-  background-color: #5196F6 !important; 
-  transform: scale(1); 
-}
 
-/* Start purging... */
-@import 'tailwindcss/utilities';
-/* Stop purging. */
-/* Your own custom utilities */
+.slick-dots li.slick-active div {
+  background-color: #5196f6 !important;
+  transform: scale(1);
+}

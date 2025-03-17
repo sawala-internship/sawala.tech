@@ -87,6 +87,7 @@ const ImageWrapper = styled.div`
 export const Technology: React.FC = () => {
   return (
     <>
+      {/* @ts-ignore */}
       <Element name="technology" className="element">
         <Container tag={'div'} tw="px-0 pt-5 sm:pt-0 sm:p-5 md:p-14">
           <Content>
@@ -103,22 +104,22 @@ export const Technology: React.FC = () => {
               </ContentLeftTop>
               <ContentLeftBot>
                 <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-1.png'} layout="fill" />
+                  <Image unoptimized={true} src={'/assets/images/tech-left-1.png'} layout="fill" alt="stack" />
                 </ImageWrapper>
                 <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-4.png'} layout="fill" />
+                  <Image unoptimized={true} src={'/assets/images/tech-left-4.png'} layout="fill" alt="stack" />
                 </ImageWrapper>
                 <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-2.png'} layout="fill" />
+                  <Image unoptimized={true} src={'/assets/images/tech-left-2.png'} layout="fill" alt="stack" />
                 </ImageWrapper>
                 <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-5.png'} layout="fill" />
+                  <Image unoptimized={true} src={'/assets/images/tech-left-5.png'} layout="fill" alt="stack" />
                 </ImageWrapper>
                 <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-3.png'} layout="fill" />
+                  <Image unoptimized={true} src={'/assets/images/tech-left-3.png'} layout="fill" alt="stack" />
                 </ImageWrapper>
                 <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-6.png'} layout="fill" />
+                  <Image unoptimized={true} src={'/assets/images/tech-left-6.png'} layout="fill" alt="stack" />
                 </ImageWrapper>
               </ContentLeftBot>
             </ContentLeft>
@@ -165,17 +166,59 @@ export const Technology: React.FC = () => {
             </ContentRight>
             <ContentBottomSub>
               <ContentBottomtBot>
-                <Image unoptimized={true} src={'/assets/images/tech-left-1.png'} height={70} width={170} layout="fixed" />
+                <Image
+                  unoptimized={true}
+                  src={'/assets/images/tech-left-1.png'}
+                  height={70}
+                  width={170}
+                  layout="fixed"
+                  alt="stack"
+                />
 
-                <Image unoptimized={true} src={'/assets/images/tech-left-4.png'} height={70} width={170} layout="fixed" />
+                <Image
+                  unoptimized={true}
+                  src={'/assets/images/tech-left-4.png'}
+                  height={70}
+                  width={170}
+                  layout="fixed"
+                  alt="stack"
+                />
 
-                <Image unoptimized={true} src={'/assets/images/tech-left-2.png'} height={70} width={170} layout="fixed" />
+                <Image
+                  unoptimized={true}
+                  src={'/assets/images/tech-left-2.png'}
+                  height={70}
+                  width={170}
+                  layout="fixed"
+                  alt="stack"
+                />
 
-                <Image unoptimized={true} src={'/assets/images/tech-left-5.png'} height={70} width={170} layout="fixed" />
+                <Image
+                  unoptimized={true}
+                  src={'/assets/images/tech-left-5.png'}
+                  height={70}
+                  width={170}
+                  layout="fixed"
+                  alt="stack"
+                />
 
-                <Image unoptimized={true} src={'/assets/images/tech-left-3.png'} height={70} width={170} layout="fixed" />
+                <Image
+                  unoptimized={true}
+                  src={'/assets/images/tech-left-3.png'}
+                  height={70}
+                  width={170}
+                  layout="fixed"
+                  alt="stack"
+                />
 
-                <Image unoptimized={true} src={'/assets/images/tech-left-6.png'} height={70} width={170} layout="fixed" />
+                <Image
+                  unoptimized={true}
+                  src={'/assets/images/tech-left-6.png'}
+                  height={70}
+                  width={170}
+                  layout="fixed"
+                  alt="stack"
+                />
               </ContentBottomtBot>
               <Button text="See More" variant="primary" tw="hidden mt-6 rounded-full px-12" />
             </ContentBottomSub>

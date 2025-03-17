@@ -32,6 +32,7 @@ export const Team: React.FC = () => {
 
   return (
     <>
+      {/* @ts-ignore */}
       <Element name="team" className="element">
         <Container tag={'div'} tw="px-5 md:px-14">
           <div tw="flex flex-col items-center justify-between w-full text-center">

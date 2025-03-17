@@ -5,6 +5,7 @@ const StyledContainer = styled.div`
 `
 interface ContainerProps {
   tag?: React.ElementType
+  children: React.ReactNode
 }
 export const Container: React.FC<ContainerProps> = ({ tag = 'div', children, ...rest }) => {
   return (

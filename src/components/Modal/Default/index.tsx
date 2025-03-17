@@ -50,7 +50,8 @@ export const DefaultModal: React.FunctionComponent<DefaultModal & React.HTMLAttr
               enterTo="opacity-100"
               leave="ease-in duration-200"
               leaveFrom="opacity-100"
-              leaveTo="opacity-0">
+              leaveTo="opacity-0"
+            >
               <Dialog.Overlay tw="fixed inset-0" />
             </Transition.Child>
             <span tw="inline-block h-screen align-middle" aria-hidden="true">
@@ -63,7 +64,8 @@ export const DefaultModal: React.FunctionComponent<DefaultModal & React.HTMLAttr
               enterTo="opacity-100 scale-100"
               leave="ease-in duration-200"
               leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 -scale-y-95">
+              leaveTo="opacity-0 -scale-y-95"
+            >
               <div className="z-50 inline-block w-full h-screen overflow-hidden align-middle">
                 <header className={`absolute w-full ${scrolled ? 'py-3 lg:py-5' : ' py-5 lg:py-10'}`}>
                   <div tw="px-5 lg:mx-auto lg:w-11/12 lg:px-14 flex justify-end">
@@ -75,7 +77,8 @@ export const DefaultModal: React.FunctionComponent<DefaultModal & React.HTMLAttr
                         onClick={() => {
                           setIsOpen(false)
                           onClose && onClose()
-                        }}>
+                        }}
+                      >
                         <X size={40} color="#ffffff" />
                       </button>
                     )}
@@ -92,7 +95,8 @@ export const DefaultModal: React.FunctionComponent<DefaultModal & React.HTMLAttr
                           setIsOpen(false)
                           onClose && onClose()
                         }}
-                        offset={dataLinks.offset}></Links>
+                        offset={dataLinks.offset}
+                      ></Links>
                     ))}
                   </div>
                 </div>

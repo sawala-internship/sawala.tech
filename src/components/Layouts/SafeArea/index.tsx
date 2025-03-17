@@ -5,6 +5,7 @@ const StyledContainer = styled.div`
 `
 interface SafeAreaProps {
   tag?: React.ElementType
+  children: React.ReactNode
 }
 export const SafeArea: React.FC<SafeAreaProps> = ({ tag = 'div', children, ...rest }) => {
   return (

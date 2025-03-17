@@ -45,6 +45,7 @@ const Founder: FC<FounderProps> = ({ image, name, about, desc, link }) => {
         width={isDesktop ? 140 : 100}
         height={isDesktop ? 140 : 100}
         objectFit="contain"
+        alt="founder"
       />
       <Title>
         {name}
@@ -60,6 +61,7 @@ const Founder: FC<FounderProps> = ({ image, name, about, desc, link }) => {
             layout="fixed"
             width={30}
             height={30}
+            alt="linkedin"
           />
         </a>
       </Title>

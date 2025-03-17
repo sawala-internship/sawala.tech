@@ -21,6 +21,7 @@ const ContentHead = styled.h1`
 export const Contact: React.FC = () => {
   return (
     <>
+      {/* @ts-ignore */}
       <Element name="contactus" className="element">
         <Background>
           <Container>

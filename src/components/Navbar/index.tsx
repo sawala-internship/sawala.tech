@@ -41,7 +41,8 @@ export const Navbar: FC<LinkProps> = ({ withScrolled = true }) => {
               ? 'bg-white py-3 lg:py-5 shadow-md transition-all duration-700'
               : 'transition-all duration-500 py-5 lg:py-10'
             : 'bg-white py-3 lg:py-5 shadow-md transition-all duration-700'
-        }`}>
+        }`}
+      >
         <Container tag="nav" tw="flex items-center justify-between">
           <div tw="relative w-[155px] h-auto flex justify-start p-5 cursor-pointer">
             <Image
@@ -49,6 +50,7 @@ export const Navbar: FC<LinkProps> = ({ withScrolled = true }) => {
               src={'/assets/images/logo-sawala-tech(new).svg'}
               layout={'fill'}
               onClick={() => router?.push('/')}
+              alt="logo"
             />
           </div>
           <div tw="w-11/12">
@@ -57,15 +59,17 @@ export const Navbar: FC<LinkProps> = ({ withScrolled = true }) => {
                 <div tw="flex justify-center items-center">
                   <a
                     tw="text-[#011154] text-base font-body cursor-pointer px-2 flex items-center border-l-[0.5px] border-black order-1"
-                    onClick={() => setDropdown(!dropdown)}>
+                    onClick={() => setDropdown(!dropdown)}
+                  >
                     <div tw="relative w-[138px] h-auto flex justify-start p-3">
-                      <Image unoptimized={true} src={'/assets/images/tech.svg'} layout={'fill'} />
+                      <Image unoptimized={true} src={'/assets/images/tech.svg'} layout={'fill'} alt="tech" />
                     </div>
                     <div tw="relative w-[11px] h-auto flex p-1 px-4">
                       <Image
                         unoptimized={true}
                         src={dropdown ? '/assets/images/chevron-rotate.svg' : '/assets/images/chevron.svg'}
                         layout={'fill'}
+                        alt="chevron"
                       />
                     </div>
                   </a>
@@ -75,7 +79,8 @@ export const Navbar: FC<LinkProps> = ({ withScrolled = true }) => {
                     dropdown
                       ? 'absolute mt-4 bg-white border-b border-white rounded-md shadow-md transition-all duration-200'
                       : ''
-                  }`}>
+                  }`}
+                >
                   {dropdown && (
                     <ul tw=" w-[181px]">
                       <li>
@@ -101,6 +106,7 @@ export const Navbar: FC<LinkProps> = ({ withScrolled = true }) => {
               onClick={() => setOpen(true)}
               className="cursor-pointer"
               layout="fill"
+              alt="navbar"
             />
           </div>
         </Container>

@@ -31,6 +31,7 @@ const PartnerWrapper = styled.div`
 export const Service: React.FC = () => {
   return (
     <>
+      {/* @ts-ignore */}
       <Element name="service" className="element">
         <Background>
           <Container tag={'div'} tw="p-5 md:p-14">
@@ -79,6 +80,7 @@ export const Service: React.FC = () => {
                             height={150}
                             layout="fixed"
                             tw="rounded-md"
+                            alt="service"
                           />
                         </div>
                         <div tw="row-span-2 row-start-1">
@@ -89,6 +91,7 @@ export const Service: React.FC = () => {
                             height={150}
                             layout="fixed"
                             tw="rounded-md"
+                            alt="service"
                           />
                         </div>
                         <div tw="row-span-2 row-start-4">
@@ -99,6 +102,7 @@ export const Service: React.FC = () => {
                             height={150}
                             layout="fixed"
                             tw="rounded-md"
+                            alt="service"
                           />
                         </div>
                         <div tw="row-span-2 row-start-3">
@@ -109,6 +113,7 @@ export const Service: React.FC = () => {
                             height={150}
                             layout="fixed"
                             tw="rounded-md"
+                            alt="service"
                           />
                         </div>
                       </div>
@@ -148,6 +153,7 @@ export const Service: React.FC = () => {
                           width={106}
                           height={110}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                       <div tw="col-span-2">
@@ -157,6 +163,7 @@ export const Service: React.FC = () => {
                           width={157}
                           height={50}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                       <div tw="transform -translate-x-16">
@@ -166,6 +173,7 @@ export const Service: React.FC = () => {
                           width={107}
                           height={50}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                       <div tw="transform -translate-x-16">
@@ -175,6 +183,7 @@ export const Service: React.FC = () => {
                           width={120}
                           height={50}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                       <div>
@@ -184,6 +193,7 @@ export const Service: React.FC = () => {
                           width={105}
                           height={50}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                       <div tw="col-span-2">
@@ -193,6 +203,7 @@ export const Service: React.FC = () => {
                           width={332}
                           height={50}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                     </div>
@@ -205,6 +216,7 @@ export const Service: React.FC = () => {
                           width={75}
                           height={80}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                       <div tw="">
@@ -214,6 +226,7 @@ export const Service: React.FC = () => {
                           width={85}
                           height={38}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                       <div tw="col-span-2 transform translate-x-2">
@@ -223,6 +236,7 @@ export const Service: React.FC = () => {
                           width={120}
                           height={38}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                       <div tw="">
@@ -232,6 +246,7 @@ export const Service: React.FC = () => {
                           width={85}
                           height={38}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                       <div tw="transform translate-x-2">
@@ -241,6 +256,7 @@ export const Service: React.FC = () => {
                           width={105}
                           height={38}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                       <div tw="col-span-4">
@@ -250,6 +266,7 @@ export const Service: React.FC = () => {
                           width={240}
                           height={38}
                           layout="fixed"
+                          alt="service"
                         />
                       </div>
                     </div>
@@ -273,6 +290,7 @@ export const Service: React.FC = () => {
                         width={200}
                         height={200}
                         layout="fixed"
+                        alt="service"
                         tw="rounded-md"
                       />
                     </div>
@@ -283,6 +301,7 @@ export const Service: React.FC = () => {
                         width={200}
                         height={200}
                         layout="fixed"
+                        alt="service"
                         tw="rounded-md"
                       />
                     </div>
@@ -293,6 +312,7 @@ export const Service: React.FC = () => {
                         width={200}
                         height={200}
                         layout="fixed"
+                        alt="service"
                         tw="rounded-md"
                       />
                     </div>
@@ -303,6 +323,7 @@ export const Service: React.FC = () => {
                         width={200}
                         height={200}
                         layout="fixed"
+                        alt="service"
                         tw="rounded-md"
                       />
                     </div>

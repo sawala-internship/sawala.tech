@@ -23,7 +23,7 @@ interface ProductProps {
 const Product: FC<ProductProps> = ({ image, title, subtitle, link }) => (
   <>
     <ContentProduct>
-      <Image unoptimized={true} src={image} layout="fixed" width={149} height={149} objectFit="contain" />
+      <Image unoptimized={true} src={image} layout="fixed" width={149} height={149} objectFit="contain" alt="product" />
       <Title>{title}</Title>
       <SubTitle>{subtitle}</SubTitle>
       <Button

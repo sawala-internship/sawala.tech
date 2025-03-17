@@ -43,7 +43,13 @@ export const HeroDesa: React.FC = () => {
     <>
       <div tw="md:hidden">
         <div tw="relative w-[100%] h-[330px] -mb-10">
-          <Image src={'/assets/images/desa-mobile.png'} layout="fill" objectPosition="right" objectFit="contain" />
+          <Image
+            src={'/assets/images/desa-mobile.png'}
+            layout="fill"
+            objectPosition="right"
+            objectFit="contain"
+            alt="desa"
+          />
         </div>
       </div>
       <Main>
@@ -55,6 +61,7 @@ export const HeroDesa: React.FC = () => {
                 layout={'fixed'}
                 width={isDesktop ? 86 : 50}
                 height={isDesktop ? 71 : 40}
+                alt="logo desa"
               />
               <Heading>Desa Langonsari</Heading>
             </div>
@@ -79,7 +86,7 @@ export const HeroDesa: React.FC = () => {
           </div>
           <div tw="absolute top-20 -right-20 hidden md:block">
             <div tw="relative w-[681px] h-[408px]">
-              <Image src={'/assets/images/desa.png'} layout="fill" />
+              <Image src={'/assets/images/desa.png'} layout="fill" alt="desa" />
             </div>
           </div>
         </Container>

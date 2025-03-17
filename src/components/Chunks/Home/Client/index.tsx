@@ -28,6 +28,7 @@ export const Client: React.FC = () => {
   const { dataClient, isLoadingClient } = useClient(`featured-client?populate=Component.image`)
   return (
     <>
+      {/* @ts-ignore */}
       <Element name="client" className="element">
         <Background>
           <Container>
@@ -51,6 +52,7 @@ export const Client: React.FC = () => {
                           width={140}
                           height={65}
                           objectFit="contain"
+                          alt="client"
                         />
                       </ContentGaleryItems>
                     ))}

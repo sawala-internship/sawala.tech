@@ -1,6 +1,6 @@
 import { Link, scroller } from 'react-scroll'
 import { styled } from 'twin.macro'
-const NavLinks = styled(Link)`
+const NavLinks = styled(Link as any)`
   color: white;
   &.active {
     font-weight: 700;
@@ -38,7 +38,8 @@ const Links: FC<LinkProps> = ({ to, title, onClick, offset }) => {
           scrollToPage(to)
           onClick && onClick()
         }}
-        className="cursor-pointer">
+        className="cursor-pointer"
+      >
         {title}
       </NavLinks>
     </>

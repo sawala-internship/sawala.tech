@@ -6,7 +6,7 @@ interface ClientProps {
 
 const Client: FC<ClientProps> = ({ image }) => (
   <>
-    <Image unoptimized={true} src={image} layout="fixed" width={140} height={65} objectFit="contain" />
+    <Image unoptimized={true} src={image} layout="fixed" width={140} height={65} objectFit="contain" alt="client" />
   </>
 )
 

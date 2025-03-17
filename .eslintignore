@@ -1,1 +1,7 @@
+**/node_modules/*
+**/out/*
+**/.next/*
+coverage/*
+src/shared/styles/index.scss
+.next
 *.js

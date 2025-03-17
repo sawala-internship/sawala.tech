@@ -19,6 +19,7 @@ export const Footer: React.FC = () => {
         <Container>
           <Content>
             <div tw="flex space-x-5 justify-center flex-wrap lg:justify-evenly w-full text-gray-400">
+              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -26,9 +27,12 @@ export const Footer: React.FC = () => {
                 spy={true}
                 smooth={true}
                 duration={300}
-                className="cursor-pointer hover:text-black">
+                className="cursor-pointer hover:text-black"
+              >
                 Home
               </ReactLink>
+
+              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -36,9 +40,12 @@ export const Footer: React.FC = () => {
                 spy={true}
                 smooth={true}
                 duration={300}
-                className="cursor-pointer hover:text-black">
+                className="cursor-pointer hover:text-black"
+              >
                 About
               </ReactLink>
+
+              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -46,9 +53,12 @@ export const Footer: React.FC = () => {
                 spy={true}
                 smooth={true}
                 duration={300}
-                className="cursor-pointer hover:text-black">
+                className="cursor-pointer hover:text-black"
+              >
                 Service
               </ReactLink>
+
+              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -56,9 +66,12 @@ export const Footer: React.FC = () => {
                 spy={true}
                 smooth={true}
                 duration={300}
-                className="cursor-pointer hover:text-black">
+                className="cursor-pointer hover:text-black"
+              >
                 Product
               </ReactLink>
+
+              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -66,9 +79,12 @@ export const Footer: React.FC = () => {
                 spy={true}
                 smooth={true}
                 duration={300}
-                className="hidden">
+                className="hidden"
+              >
                 Case Study
               </ReactLink>
+
+              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -76,9 +92,12 @@ export const Footer: React.FC = () => {
                 spy={true}
                 smooth={true}
                 duration={300}
-                className="cursor-pointer hover:text-black">
+                className="cursor-pointer hover:text-black"
+              >
                 Technology
               </ReactLink>
+
+              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -86,25 +105,41 @@ export const Footer: React.FC = () => {
                 spy={true}
                 smooth={true}
                 duration={300}
-                className="cursor-pointer hover:text-black">
+                className="cursor-pointer hover:text-black"
+              >
                 Contact Us
               </ReactLink>
             </div>
             <div tw="flex space-x-3 md:space-x-0 justify-evenly w-3/12 text-gray-500 my-8">
-              <Link href="https://www.facebook.com/sawala.tech/">
-                <a target="_blank">
-                  <Image unoptimized={true} src={'/assets/icons/facebook.png'} height={20} width={20} layout="fixed" />
-                </a>
+              <Link href="https://www.facebook.com/sawala.tech/" target="_blank">
+                <Image
+                  unoptimized={true}
+                  src={'/assets/icons/facebook.png'}
+                  height={20}
+                  width={20}
+                  layout="fixed"
+                  alt="social-media"
+                />
               </Link>
-              <Link href="https://www.instagram.com/sawala.tech/">
-                <a target="_blank">
-                  <Image unoptimized={true} src={'/assets/icons/instagram.png'} height={20} width={20} layout="fixed" />
-                </a>
+              <Link href="https://www.instagram.com/sawala.tech/" target="_blank">
+                <Image
+                  unoptimized={true}
+                  src={'/assets/icons/instagram.png'}
+                  height={20}
+                  width={20}
+                  layout="fixed"
+                  alt="social-media"
+                />
               </Link>
-              <Link href="https://www.linkedin.com/company/sawala/">
-                <a target="_blank">
-                  <Image unoptimized={true} src={'/assets/icons/linked.png'} height={20} width={20} layout="fixed" />
-                </a>
+              <Link href="https://www.linkedin.com/company/sawala/" target="_blank">
+                <Image
+                  unoptimized={true}
+                  src={'/assets/icons/linked.png'}
+                  height={20}
+                  width={20}
+                  layout="fixed"
+                  alt="social-media"
+                />
               </Link>
             </div>
             <p tw="text-gray-400 px-5">© {new Date().getFullYear()} PT Sawala Inovasi Indonesia. All rights reserved.</p>

@@ -35,6 +35,7 @@ export const Product: React.FC = () => {
 
   return (
     <>
+      {/* @ts-ignore */}
       <Element name="product" className="element">
         <Background>
           <Container tag={'div'} tw="p-5 md:p-14">

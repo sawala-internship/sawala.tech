@@ -26,7 +26,7 @@ const ContentHead = styled.h1`
   ${tw`mt-4 mb-5 text-3xl font-bold`}
 `
 const ContentSub = styled.p`
-  ${tw`md:w-6/12 lg:w-10/12 mb-4 md:mb-8`}
+  ${tw`mb-4 md:w-6/12 lg:w-10/12 md:mb-8`}
   @media (max-width: 1024px) and (min-width: 768px) {
     ${tw`w-full mb-24`}
   }
@@ -35,11 +35,19 @@ const ContentSub = styled.p`
 export const Formulir: React.FC = () => {
   return (
     <>
+      {/* @ts-ignore */}
       <Element name="product" className="element">
         <Background>
           <Container tag={'div'} tw="p-5 md:p-14">
             <Content>
-              <Image unoptimized={true} src={'/assets/images/logo_formulir.svg'} width={130} height={30} layout="fixed" />
+              <Image
+                unoptimized={true}
+                src={'/assets/images/logo_formulir.svg'}
+                width={130}
+                height={30}
+                layout="fixed"
+                alt="formulir"
+              />
               <ContentHead>Formulir online serba bisa.</ContentHead>
               <ContentSub>
                 Buat formulir pendaftaran, terima pembayaran dan otomatisasi banyak hal. <br /> <br />

@@ -64,6 +64,7 @@ export const Founder: React.FC = () => {
                       width={isDesktop ? 145 : isIpad ? 100 : 145}
                       height={isDesktop ? 145 : isIpad ? 100 : 145}
                       layout={'fixed'}
+                      alt="founder"
                     />
                   </div>
                   <div tw="flex flex-col sm:justify-center sm:ml-4">
@@ -79,11 +80,16 @@ export const Founder: React.FC = () => {
                   </p>
                 </DescriptionWrapper>
                 <div tw="flex items-center mt-2">
-                  <Image unoptimized={true} src={'/assets/icons/linkedin.png'} layout="fixed" width={30} height={30} />
-                  <Link href="http://linkedin.com/in/ahmadnr">
-                    <a target="_blank">
-                      <p tw="ml-3 hover:cursor-pointer">linkedin.com/in/ahmadnr</p>
-                    </a>
+                  <Image
+                    unoptimized={true}
+                    src={'/assets/icons/linkedin.png'}
+                    layout="fixed"
+                    width={30}
+                    height={30}
+                    alt="linkedin"
+                  />
+                  <Link href="http://linkedin.com/in/ahmadnr" target="_blank">
+                    <p tw="ml-3 hover:cursor-pointer">linkedin.com/in/ahmadnr</p>
                   </Link>
                 </div>
               </div>
@@ -98,6 +104,7 @@ export const Founder: React.FC = () => {
                       width={isDesktop ? 145 : isIpad ? 100 : 145}
                       height={isDesktop ? 145 : isIpad ? 100 : 145}
                       layout={'fixed'}
+                      alt="founder"
                     />
                   </div>
                   <div tw="flex flex-col sm:justify-center sm:ml-4">
@@ -113,11 +120,16 @@ export const Founder: React.FC = () => {
                   </p>
                 </DescriptionWrapper>
                 <div tw="flex items-center mt-2">
-                  <Image unoptimized={true} src={'/assets/icons/linkedin.png'} layout="fixed" width={30} height={30} />
-                  <Link href="http://linkedin.com/in/sutisna">
-                    <a target="_blank">
-                      <p tw="ml-3 hover:cursor-pointer">linkedin.com/in/sutisna</p>
-                    </a>
+                  <Image
+                    unoptimized={true}
+                    src={'/assets/icons/linkedin.png'}
+                    layout="fixed"
+                    width={30}
+                    height={30}
+                    alt="linkedin"
+                  />
+                  <Link href="http://linkedin.com/in/sutisna" target="_blank">
+                    <p tw="ml-3 hover:cursor-pointer">linkedin.com/in/sutisna</p>
                   </Link>
                 </div>
               </div>
