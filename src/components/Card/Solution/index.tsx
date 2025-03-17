@@ -21,7 +21,16 @@ interface SolutionProps {
 
 const Solution: FC<SolutionProps> = ({ image, title, subtitle }) => (
   <ContentSolution>
-    <Image unoptimized={true} src={image} layout="fixed" width={50} height={50} objectFit="contain" alt="solution" />
+    <Image
+      unoptimized={true}
+      src={image}
+      layout="fixed"
+      width={50}
+      height={50}
+      objectFit="contain"
+      alt="solution"
+      className="mx-auto"
+    />
     <Title>{title}</Title>
     <SubTitle>{subtitle}</SubTitle>
   </ContentSolution>
