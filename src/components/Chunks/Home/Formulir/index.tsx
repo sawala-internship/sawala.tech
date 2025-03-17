@@ -34,38 +34,35 @@ const ContentSub = styled.p`
 
 export const Formulir: React.FC = () => {
   return (
-    <>
-      {/* @ts-ignore */}
-      <Element name="product" className="element">
-        <Background>
-          <Container tag={'div'} tw="p-5 md:p-14">
-            <Content>
-              <Image
-                unoptimized={true}
-                src={'/assets/images/logo_formulir.svg'}
-                width={130}
-                height={30}
-                layout="fixed"
-                alt="formulir"
-              />
-              <ContentHead>Formulir online serba bisa.</ContentHead>
-              <ContentSub>
-                Buat formulir pendaftaran, terima pembayaran dan otomatisasi banyak hal. <br /> <br />
-                Formulir.id adalah Software as a Service (SaaS) berbasis cloud untuk membuat formulir online. Cocok digunakan
-                untuk pendaftaran, penjualan kelas online dan produk lainnya. Dilengkapi berbagai fitur otomatisasi seperti
-                invoice, integrasi dengan payment gateway dan aplikasi webinar dll.
-              </ContentSub>
-              <Button
-                text="Contact Us"
-                variant="secondary"
-                tw="mt-6 rounded-full px-8"
-                external={true}
-                url="https://wa.link/4l62ek"
-              />
-            </Content>
-          </Container>
-        </Background>
-      </Element>
-    </>
+    <Element name="product" className="element">
+      <Background>
+        <Container tag={'div'} tw="p-5 md:p-14">
+          <Content>
+            <Image
+              unoptimized={true}
+              src={'/assets/images/logo_formulir.svg'}
+              width={130}
+              height={30}
+              layout="fixed"
+              alt="formulir"
+            />
+            <ContentHead>Formulir online serba bisa.</ContentHead>
+            <ContentSub>
+              Buat formulir pendaftaran, terima pembayaran dan otomatisasi banyak hal. <br /> <br />
+              Formulir.id adalah Software as a Service (SaaS) berbasis cloud untuk membuat formulir online. Cocok digunakan
+              untuk pendaftaran, penjualan kelas online dan produk lainnya. Dilengkapi berbagai fitur otomatisasi seperti
+              invoice, integrasi dengan payment gateway dan aplikasi webinar dll.
+            </ContentSub>
+            <Button
+              text="Contact Us"
+              variant="secondary"
+              tw="mt-6 rounded-full px-8"
+              external={true}
+              url="https://wa.link/4l62ek"
+            />
+          </Content>
+        </Container>
+      </Background>
+    </Element>
   )
 }

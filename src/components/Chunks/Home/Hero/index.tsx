@@ -46,7 +46,6 @@ export const Hero: React.FC = () => {
   return (
     <>
       <Navbar />
-      {/* @ts-ignore */}
       <Element name="home" className="element">
         <Background>
           <Container tag={'div'} tw="px-0 py-10 sm:py-0">
@@ -58,7 +57,6 @@ export const Hero: React.FC = () => {
                   utama mengembangkan sistem informasi berbasis teknologi web dan cloud.
                 </ContentTextSub>
 
-                {/* @ts-ignore */}
                 <Link to="about" spy={true} smooth={true} offset={-50} duration={300}>
                   <Button text="Learn More" variant="primary" tw="mt-6 rounded-full px-8" />
                 </Link>

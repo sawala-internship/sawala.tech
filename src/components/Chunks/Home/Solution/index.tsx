@@ -22,34 +22,31 @@ export const Solution: React.FC = () => {
   const { dataSolution, isLoadingSolution } = useSolution(`solutions?populate=*`)
 
   return (
-    <>
-      {/* @ts-ignore */}
-      <Element name="solution" className="element">
-        <Background>
-          <Container tag={'div'} tw="px-5 md:px-14">
-            <Content>
-              <ContentHead>
-                Solutions<span tw="text-secondary">_</span>
-              </ContentHead>
-              <ContentSolutionWrapper>
-                {!isLoadingSolution && (
-                  <>
-                    {dataSolution?.data.map((data: any, i: number) => (
-                      <Fragment key={i}>
-                        <SolutionCard
-                          image={data?.attributes?.icon?.data?.attributes?.url}
-                          title={data?.attributes?.title}
-                          subtitle={data?.attributes.description}
-                        />
-                      </Fragment>
-                    ))}
-                  </>
-                )}
-              </ContentSolutionWrapper>
-            </Content>
-          </Container>
-        </Background>
-      </Element>
-    </>
+    <Element name="solution" className="element">
+      <Background>
+        <Container tag={'div'} tw="px-5 md:px-14">
+          <Content>
+            <ContentHead>
+              Solutions<span tw="text-secondary">_</span>
+            </ContentHead>
+            <ContentSolutionWrapper>
+              {!isLoadingSolution && (
+                <>
+                  {dataSolution?.data.map((data: any, i: number) => (
+                    <Fragment key={i}>
+                      <SolutionCard
+                        image={data?.attributes?.icon?.data?.attributes?.url}
+                        title={data?.attributes?.title}
+                        subtitle={data?.attributes.description}
+                      />
+                    </Fragment>
+                  ))}
+                </>
+              )}
+            </ContentSolutionWrapper>
+          </Content>
+        </Container>
+      </Background>
+    </Element>
   )
 }

@@ -27,43 +27,40 @@ const ContentGaleryItems = styled.div`
 export const Client: React.FC = () => {
   const { dataClient, isLoadingClient } = useClient(`featured-client?populate=Component.image`)
   return (
-    <>
-      {/* @ts-ignore */}
-      <Element name="client" className="element">
-        <Background>
-          <Container>
-            <Content>
-              <ContentHead>
-                Featured Clients<span tw="text-secondary">_</span>
-              </ContentHead>
-              <Contentsub>
-                Kami telah dipercaya perusahaan nasional dan internasional untuk mengembangkan, mengelola dan memelihara
-                software/sistem informasi mereka.
-              </Contentsub>
-              <ContentGalery>
-                {!isLoadingClient && (
-                  <>
-                    {dataClient?.data?.attributes?.Component?.map((data: any, i: number) => (
-                      <ContentGaleryItems key={i}>
-                        <Image
-                          unoptimized={true}
-                          src={data?.image?.data?.attributes?.url}
-                          layout="fixed"
-                          width={140}
-                          height={65}
-                          objectFit="contain"
-                          alt="client"
-                        />
-                      </ContentGaleryItems>
-                    ))}
-                  </>
-                )}
-              </ContentGalery>
-              <Button text="More Client" tw="hidden rounded-full px-12 mt-10"></Button>
-            </Content>
-          </Container>
-        </Background>
-      </Element>
-    </>
+    <Element name="client" className="element">
+      <Background>
+        <Container>
+          <Content>
+            <ContentHead>
+              Featured Clients<span tw="text-secondary">_</span>
+            </ContentHead>
+            <Contentsub>
+              Kami telah dipercaya perusahaan nasional dan internasional untuk mengembangkan, mengelola dan memelihara
+              software/sistem informasi mereka.
+            </Contentsub>
+            <ContentGalery>
+              {!isLoadingClient && (
+                <>
+                  {dataClient?.data?.attributes?.Component?.map((data: any, i: number) => (
+                    <ContentGaleryItems key={i}>
+                      <Image
+                        unoptimized={true}
+                        src={data?.image?.data?.attributes?.url}
+                        layout="fixed"
+                        width={140}
+                        height={65}
+                        objectFit="contain"
+                        alt="client"
+                      />
+                    </ContentGaleryItems>
+                  ))}
+                </>
+              )}
+            </ContentGalery>
+            <Button text="More Client" tw="hidden rounded-full px-12 mt-10"></Button>
+          </Content>
+        </Container>
+      </Background>
+    </Element>
   )
 }

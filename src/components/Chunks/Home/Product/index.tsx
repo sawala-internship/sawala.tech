@@ -34,33 +34,30 @@ export const Product: React.FC = () => {
   const { dataProduct, isLoadingProduct } = useProduct(`products?populate=*`)
 
   return (
-    <>
-      {/* @ts-ignore */}
-      <Element name="product" className="element">
-        <Background>
-          <Container tag={'div'} tw="p-5 md:p-14">
-            <Content>
-              <ContentHead>Products_</ContentHead>
-              <div className={`grid ${isClass}`}>
-                {!isLoadingProduct && (
-                  <>
-                    {dataProduct?.data.map((data: any, i: number) => (
-                      <Fragment key={i}>
-                        <ProductCard
-                          image={data?.attributes?.images?.data?.attributes?.url}
-                          title={data?.attributes?.title}
-                          subtitle={data?.attributes?.description}
-                          link={data?.attributes?.url}
-                        />
-                      </Fragment>
-                    ))}
-                  </>
-                )}
-              </div>
-            </Content>
-          </Container>
-        </Background>
-      </Element>
-    </>
+    <Element name="product" className="element">
+      <Background>
+        <Container tag={'div'} tw="p-5 md:p-14">
+          <Content>
+            <ContentHead>Products_</ContentHead>
+            <div className={`grid ${isClass}`}>
+              {!isLoadingProduct && (
+                <>
+                  {dataProduct?.data.map((data: any, i: number) => (
+                    <Fragment key={i}>
+                      <ProductCard
+                        image={data?.attributes?.images?.data?.attributes?.url}
+                        title={data?.attributes?.title}
+                        subtitle={data?.attributes?.description}
+                        link={data?.attributes?.url}
+                      />
+                    </Fragment>
+                  ))}
+                </>
+              )}
+            </div>
+          </Content>
+        </Container>
+      </Background>
+    </Element>
   )
 }

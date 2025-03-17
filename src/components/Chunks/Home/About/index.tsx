@@ -19,18 +19,15 @@ export const About: React.FC = () => {
   const { dataAbout, isLoadingAbout } = useAbout(`about?populate=*`)
 
   return (
-    <>
-      {/* @ts-ignore */}
-      <Element name="about" className="element">
-        <Container tag={'div'} tw="px-0 sm:p-5 md:p-10">
-          <Content>
-            <ContentHead>
-              About<span tw="text-secondary">_</span>
-            </ContentHead>
-            <Contentsub>{!isLoadingAbout && dataAbout?.data?.attributes?.AboutText}</Contentsub>
-          </Content>
-        </Container>
-      </Element>
-    </>
+    <Element name="about" className="element">
+      <Container tag={'div'} tw="px-0 sm:p-5 md:p-10">
+        <Content>
+          <ContentHead>
+            About<span tw="text-secondary">_</span>
+          </ContentHead>
+          <Contentsub>{!isLoadingAbout && dataAbout?.data?.attributes?.AboutText}</Contentsub>
+        </Content>
+      </Container>
+    </Element>
   )
 }

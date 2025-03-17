@@ -19,7 +19,6 @@ export const Footer: React.FC = () => {
         <Container>
           <Content>
             <div tw="flex space-x-5 justify-center flex-wrap lg:justify-evenly w-full text-gray-400">
-              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -32,7 +31,6 @@ export const Footer: React.FC = () => {
                 Home
               </ReactLink>
 
-              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -45,7 +43,6 @@ export const Footer: React.FC = () => {
                 About
               </ReactLink>
 
-              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -58,7 +55,6 @@ export const Footer: React.FC = () => {
                 Service
               </ReactLink>
 
-              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -71,7 +67,6 @@ export const Footer: React.FC = () => {
                 Product
               </ReactLink>
 
-              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -84,7 +79,6 @@ export const Footer: React.FC = () => {
                 Case Study
               </ReactLink>
 
-              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}
@@ -97,7 +91,6 @@ export const Footer: React.FC = () => {
                 Technology
               </ReactLink>
 
-              {/* @ts-ignore */}
               <ReactLink
                 activeClass="active"
                 offset={-60}

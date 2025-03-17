@@ -16,6 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "types": ["node"],
+    "typeRoots": ["./src/types", "./node_modules/@types"],
     "target": "es5",
     "plugins": [
       {
@@ -49,5 +50,5 @@
     "**/*.test.tsx",
     "coverage"
   ],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "types", "src"]
 }

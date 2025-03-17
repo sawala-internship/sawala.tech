@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const SliderPartnership = () => {
   const settings = {
-    dots: false, //pagination
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -37,7 +37,6 @@ const SliderPartnership = () => {
   }
   return (
     <div className="w-full md:max-w-3xl lg:max-w-[816px] mx-auto p-2 ">
-      {/* @ts-ignore */}
       <Slider {...settings}>
         {contentData.map((item, index) => (
           <div key={item.id || index} className="p-2">

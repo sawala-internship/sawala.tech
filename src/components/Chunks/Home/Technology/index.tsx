@@ -86,145 +86,142 @@ const ImageWrapper = styled.div`
 `
 export const Technology: React.FC = () => {
   return (
-    <>
-      {/* @ts-ignore */}
-      <Element name="technology" className="element">
-        <Container tag={'div'} tw="px-0 pt-5 sm:pt-0 sm:p-5 md:p-14">
-          <Content>
-            <ContentLeft>
-              <ContentLeftTop>
-                <ContentLeftTopHead>
-                  Technology<span tw="text-secondary">_</span>
-                </ContentLeftTopHead>
-                <ContentLeftTopSub>
-                  Berikut adalah teknologi dan framework yang kami gunakan dalam mengembangkan sistem informasi berbasis
-                  website.
-                  <Button text="See More" variant="primary" tw="hidden mt-6 rounded-full px-12" />
-                </ContentLeftTopSub>
-              </ContentLeftTop>
-              <ContentLeftBot>
-                <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-1.png'} layout="fill" alt="stack" />
-                </ImageWrapper>
-                <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-4.png'} layout="fill" alt="stack" />
-                </ImageWrapper>
-                <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-2.png'} layout="fill" alt="stack" />
-                </ImageWrapper>
-                <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-5.png'} layout="fill" alt="stack" />
-                </ImageWrapper>
-                <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-3.png'} layout="fill" alt="stack" />
-                </ImageWrapper>
-                <ImageWrapper>
-                  <Image unoptimized={true} src={'/assets/images/tech-left-6.png'} layout="fill" alt="stack" />
-                </ImageWrapper>
-              </ContentLeftBot>
-            </ContentLeft>
-            <ContentRight>
-              <ContentRightLeft>
-                <ContentRightHead>Full-stack JavaScript</ContentRightHead>
-                <ContentRightSub>
-                  Bahasa utama untuk pengembangan kami berbasis JavaScript.
-                  <br />
-                  <Ul>
-                    <li>
-                      <span tw="text-gray-500">Node untuk pengembangan backend/API</span>{' '}
-                    </li>
-                    <li>
-                      <span tw="text-gray-500"> React untuk membangun antarmuka/front-end</span>
-                    </li>
-                  </Ul>
-                  PHP dan Python digunakan sebagai bahasa kedua (secondary) untuk mendukung pengembangan dengan kebutuhan
-                  khusus.
-                </ContentRightSub>
-              </ContentRightLeft>
-              <ContentRightRight>
-                <ContentRightHead>Framework Library Pendukung</ContentRightHead>
-                <ContentRightSub>
-                  Adapun framework/library yang digunakan:
-                  <Ul>
-                    <li>
-                      <span tw="text-gray-500">Strapi sebagai headless Content Management System (CMS) utama.</span>
-                    </li>
-                    <li>
-                      <span tw="text-gray-500">
-                        Express sebagai framework untuk membangun Application Programming Interface (API).
-                      </span>
-                    </li>
-                    <li>
-                      <span tw="text-gray-500">Next Js untuk membangun antarmuka/frontend</span>
-                    </li>
-                    <li>
-                      <span tw="text-gray-500">Laravel untuk framework berbasis PHP</span>
-                    </li>
-                  </Ul>
-                </ContentRightSub>
-              </ContentRightRight>
-            </ContentRight>
-            <ContentBottomSub>
-              <ContentBottomtBot>
-                <Image
-                  unoptimized={true}
-                  src={'/assets/images/tech-left-1.png'}
-                  height={70}
-                  width={170}
-                  layout="fixed"
-                  alt="stack"
-                />
+    <Element name="technology" className="element">
+      <Container tag={'div'} tw="px-0 pt-5 sm:pt-0 sm:p-5 md:p-14">
+        <Content>
+          <ContentLeft>
+            <ContentLeftTop>
+              <ContentLeftTopHead>
+                Technology<span tw="text-secondary">_</span>
+              </ContentLeftTopHead>
+              <ContentLeftTopSub>
+                Berikut adalah teknologi dan framework yang kami gunakan dalam mengembangkan sistem informasi berbasis
+                website.
+                <Button text="See More" variant="primary" tw="hidden mt-6 rounded-full px-12" />
+              </ContentLeftTopSub>
+            </ContentLeftTop>
+            <ContentLeftBot>
+              <ImageWrapper>
+                <Image unoptimized={true} src={'/assets/images/tech-left-1.png'} layout="fill" alt="stack" />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image unoptimized={true} src={'/assets/images/tech-left-4.png'} layout="fill" alt="stack" />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image unoptimized={true} src={'/assets/images/tech-left-2.png'} layout="fill" alt="stack" />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image unoptimized={true} src={'/assets/images/tech-left-5.png'} layout="fill" alt="stack" />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image unoptimized={true} src={'/assets/images/tech-left-3.png'} layout="fill" alt="stack" />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image unoptimized={true} src={'/assets/images/tech-left-6.png'} layout="fill" alt="stack" />
+              </ImageWrapper>
+            </ContentLeftBot>
+          </ContentLeft>
+          <ContentRight>
+            <ContentRightLeft>
+              <ContentRightHead>Full-stack JavaScript</ContentRightHead>
+              <ContentRightSub>
+                Bahasa utama untuk pengembangan kami berbasis JavaScript.
+                <br />
+                <Ul>
+                  <li>
+                    <span tw="text-gray-500">Node untuk pengembangan backend/API</span>{' '}
+                  </li>
+                  <li>
+                    <span tw="text-gray-500"> React untuk membangun antarmuka/front-end</span>
+                  </li>
+                </Ul>
+                PHP dan Python digunakan sebagai bahasa kedua (secondary) untuk mendukung pengembangan dengan kebutuhan
+                khusus.
+              </ContentRightSub>
+            </ContentRightLeft>
+            <ContentRightRight>
+              <ContentRightHead>Framework Library Pendukung</ContentRightHead>
+              <ContentRightSub>
+                Adapun framework/library yang digunakan:
+                <Ul>
+                  <li>
+                    <span tw="text-gray-500">Strapi sebagai headless Content Management System (CMS) utama.</span>
+                  </li>
+                  <li>
+                    <span tw="text-gray-500">
+                      Express sebagai framework untuk membangun Application Programming Interface (API).
+                    </span>
+                  </li>
+                  <li>
+                    <span tw="text-gray-500">Next Js untuk membangun antarmuka/frontend</span>
+                  </li>
+                  <li>
+                    <span tw="text-gray-500">Laravel untuk framework berbasis PHP</span>
+                  </li>
+                </Ul>
+              </ContentRightSub>
+            </ContentRightRight>
+          </ContentRight>
+          <ContentBottomSub>
+            <ContentBottomtBot>
+              <Image
+                unoptimized={true}
+                src={'/assets/images/tech-left-1.png'}
+                height={70}
+                width={170}
+                layout="fixed"
+                alt="stack"
+              />
 
-                <Image
-                  unoptimized={true}
-                  src={'/assets/images/tech-left-4.png'}
-                  height={70}
-                  width={170}
-                  layout="fixed"
-                  alt="stack"
-                />
+              <Image
+                unoptimized={true}
+                src={'/assets/images/tech-left-4.png'}
+                height={70}
+                width={170}
+                layout="fixed"
+                alt="stack"
+              />
 
-                <Image
-                  unoptimized={true}
-                  src={'/assets/images/tech-left-2.png'}
-                  height={70}
-                  width={170}
-                  layout="fixed"
-                  alt="stack"
-                />
+              <Image
+                unoptimized={true}
+                src={'/assets/images/tech-left-2.png'}
+                height={70}
+                width={170}
+                layout="fixed"
+                alt="stack"
+              />
 
-                <Image
-                  unoptimized={true}
-                  src={'/assets/images/tech-left-5.png'}
-                  height={70}
-                  width={170}
-                  layout="fixed"
-                  alt="stack"
-                />
+              <Image
+                unoptimized={true}
+                src={'/assets/images/tech-left-5.png'}
+                height={70}
+                width={170}
+                layout="fixed"
+                alt="stack"
+              />
 
-                <Image
-                  unoptimized={true}
-                  src={'/assets/images/tech-left-3.png'}
-                  height={70}
-                  width={170}
-                  layout="fixed"
-                  alt="stack"
-                />
+              <Image
+                unoptimized={true}
+                src={'/assets/images/tech-left-3.png'}
+                height={70}
+                width={170}
+                layout="fixed"
+                alt="stack"
+              />
 
-                <Image
-                  unoptimized={true}
-                  src={'/assets/images/tech-left-6.png'}
-                  height={70}
-                  width={170}
-                  layout="fixed"
-                  alt="stack"
-                />
-              </ContentBottomtBot>
-              <Button text="See More" variant="primary" tw="hidden mt-6 rounded-full px-12" />
-            </ContentBottomSub>
-          </Content>
-        </Container>
-      </Element>
-    </>
+              <Image
+                unoptimized={true}
+                src={'/assets/images/tech-left-6.png'}
+                height={70}
+                width={170}
+                layout="fixed"
+                alt="stack"
+              />
+            </ContentBottomtBot>
+            <Button text="See More" variant="primary" tw="hidden mt-6 rounded-full px-12" />
+          </ContentBottomSub>
+        </Content>
+      </Container>
+    </Element>
   )
 }

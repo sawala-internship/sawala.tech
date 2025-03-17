@@ -20,24 +20,21 @@ const ContentHead = styled.h1`
 
 export const Contact: React.FC = () => {
   return (
-    <>
-      {/* @ts-ignore */}
-      <Element name="contactus" className="element">
-        <Background>
-          <Container>
-            <Content>
-              <ContentHead>Let's accelerate good things, together.</ContentHead>
-              <Button
-                text="Contact Us"
-                variant="secondary"
-                tw="font-semibold mt-6 rounded-full px-6"
-                external={true}
-                url="https://wa.link/4l62ek"
-              />
-            </Content>
-          </Container>
-        </Background>
-      </Element>
-    </>
+    <Element name="contactus" className="element">
+      <Background>
+        <Container>
+          <Content>
+            <ContentHead>Let's accelerate good things, together.</ContentHead>
+            <Button
+              text="Contact Us"
+              variant="secondary"
+              tw="font-semibold mt-6 rounded-full px-6"
+              external={true}
+              url="https://wa.link/4l62ek"
+            />
+          </Content>
+        </Container>
+      </Background>
+    </Element>
   )
 }
